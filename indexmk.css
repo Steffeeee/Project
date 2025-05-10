@@ -1,0 +1,183 @@
+/* styles.css */
+
+/* General Reset */
+
+  body {
+    background: linear-gradient(to bottom right, #23ae93 0, #004482 100%);
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    line-height: 1.5;
+    min-height: 100vh
+}
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #23ae93 0, #004482 100%);
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border: 3px solid #2d2d2c;
+    margin-bottom: 20px;
+  }
+  
+  /* Logo Styling */
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    background-color: #2d2d2c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dropbtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0; /* Align the dropdown to the right */
+  }
+  
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+/* Content Section */
+/* Remove old table styling if it's still present */
+.content table,
+.content td {
+  display: unset;
+  border-spacing: unset;
+  border-collapse: unset;
+}
+
+/* Flex layout for rows */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align top edges */
+  gap: 40px;
+  flex-wrap: nowrap; /* Keep it 2 per row */
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px; /* Add max width for consistency */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Flex children (text + image pairs) */
+.text-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 420px; /* Make all same width */
+  box-sizing: border-box;
+}
+
+/* Left & Right Layouts */
+.text-image.left {
+  flex-direction: row;
+  text-align: right;
+}
+
+.text-image.right {
+  flex-direction: row;
+  text-align: left;
+}
+
+.icon-label {
+  font-size: 17px;
+  font-weight: 750;
+  color: white;
+  line-height: 1.4;
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
+/* Image styling */
+.text-image img {
+  width: 275px;
+  height: 275px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-image {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+}
+
+.top-right-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+}
+
+.top-right-btn img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+  
